@@ -116,16 +116,20 @@ export default function PlacePage() {
           </div>
           <hr className="w-[375px]" />
           <div className="my-6">
-            <div className="p-1 pr-10 text-[16px] font-light">
+            <div className="p-1 pr-10 text-[16px] text-zinc-600 font-light">
               <h3>{place.description}</h3>
             </div>
           </div>
           <hr className="w-[375px]" />
-          <div className="my-6">
-            <div>
-              <h3 className="text-xl font-medium">What this sitter offers</h3>
-            </div>
+          <div className="my-6 text-left">
+            <h3 className="text-xl font-medium mb-2">
+              Safety & Property Rules
+            </h3>
+            <p className="text-[16px] font-ligth text-zinc-600">
+              {place.extraInfo}
+            </p>
           </div>
+          <hr className="w-[375px]" />
         </div>
         <BookingWidget place={place} />
       </div>
