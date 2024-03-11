@@ -125,7 +125,7 @@ export default function PlacePage() {
             <h3 className="text-xl font-medium mb-2">
               Safety & Property Rules
             </h3>
-            <p className="text-[16px] font-ligth text-zinc-600">
+            <p className="text-[16px] font-light text-zinc-600">
               {place.extraInfo}
             </p>
           </div>

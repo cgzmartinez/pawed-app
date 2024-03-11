@@ -14,7 +14,7 @@ import BookingsPage from './pages/BookingsPage'
 import BookingPage from './pages/BookingPage'
 import ErrorPage from './pages/ErrorPage'
 
-axios.defaults.baseURL = 'http://localhost:5173'
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL
 axios.defaults.withCredentials = true
 
 function App() {
