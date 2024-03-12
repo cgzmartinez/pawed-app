@@ -6,7 +6,7 @@ export default function PlaceGallery({ place }) {
 
   if (showAllPhotos) {
     return (
-      <div className="absolute inset-0 bg-white m-h-screen">
+      <div className="absolute inset-0 bg-white m-h-screen z-50">
         <div className="p-8 grid gap-4">
           <div
             className="fixed
