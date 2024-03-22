@@ -60,7 +60,9 @@ export default function Navbar() {
             />
           </svg>
         </div>
-        {!!user && <div>{user.name}</div>}
+        {!!user && (
+          <div className="pl-2 text-[11px] md:text-base">{user.name}</div>
+        )}
       </Link>
     </header>
   )
