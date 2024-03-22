@@ -4,6 +4,7 @@ import { Navigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import PlacesPage from './PlacesPage'
 import AccountNav from '../AccountNav'
+import ProfilePet from '../assets/mascot-profile.svg?react'
 
 export default function ProfilePage() {
   const [redirect, setRedirect] = useState(null)
@@ -35,13 +36,10 @@ export default function ProfilePage() {
     <div>
       <AccountNav />
       {subpage === 'profile' && (
-        <div className="flex items-center justify-center text-center max-w-lg mx-auto">
+        <div className="flex items-center justify-center text-center max-w-lg mx-auto px-20">
           <div className="rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] py-[50px] px-[90px]">
-            <div className="bg-primary/50 flex items-center justify-center rounded-full h-[120px] w-[120px] max-w-[125px] mb-5 mx-10">
-              <img
-                className="object-cover rounded-full h-[115px] w-[115px]"
-                src="src/assets/mascot-profile.png"
-              />
+            <div className="bg-primary/50 flex outline outline-primary outline-4 items-center justify-center rounded-full h-[120px] w-[120px] max-w-[125px] mb-5 mx-10">
+              <ProfilePet className="object-cover rounded-full h-[120px] pt-2" />
             </div>
             <div className="mb-2">Hello, {user.name}</div>
             <div className="font-thin">Logged in with ({user.email})</div>
