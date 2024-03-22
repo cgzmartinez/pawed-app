@@ -5,12 +5,12 @@ import { useContext } from 'react'
 export default function Navbar() {
   const { user } = useContext(UserContext)
   return (
-    <header className=" flex justify-between">
+    <header className="flex justify-between gap-5">
       <Link to={'/'} className="flex items-center gap-1">
         <span className="font-light hover:text-primary text-xl">pawed</span>
       </Link>
-      <div className="flex gap-2 border border-gray-300 rounded-full hover:shadow-md duration-100 py-3 px-4">
-        <div className="px-[100px]"></div>
+      <div className="flex justify-end border border-gray-300 w-full max-w-[400px] rounded-full hover:shadow-md duration-100 p-3 py-3">
+        <div className="px-auto"></div>
         <button className="bg-primary text-white p-1 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ export default function Navbar() {
       </div>
       <Link
         to={user ? '/account' : '/login'}
-        className="flex items-center gap-2 border border-gray-300 rounded-full py-2 px-4 hover:shadow-md duration-100"
+        className="flex items-center border border-gray-300 rounded-full py-2 px-4 hover:shadow-md duration-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ export default function Navbar() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-7 h-7"
+          className="w-7 h-7 mr-1"
         >
           <path
             strokeLinecap="round"
@@ -51,7 +51,7 @@ export default function Navbar() {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="w-6 h-6"
+            className="w-6 h-6 ml-1"
           >
             <path
               fillRule="evenodd"
